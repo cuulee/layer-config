@@ -35,7 +35,7 @@ config.json:
 "clickArray":[{"displayname":"Project Name","field":"ProjectNam"},{"displayname":"Subbasin","field":"Subbasin"},{"displayname":"Square Feet","field":"sq_ft"},{"displayname":"Status","field":"Status"}].
 ```
 
-url variable
+url variables
 ----
 URL variables are used to specify:
 - **lyrArr**: A list of layers from configjson to display. Defaults to all layers visible if not specified.
@@ -44,6 +44,8 @@ URL variables are used to specify:
 
 Demo
 ---
+This project was developed for the Mary's River Watershed Council. The following two URLs demonstrate how the code can be used to show different maps/layers based on the URL. Here we go to a vanilla map, showing all layers, some with hover, some with click, some with no interactivity. Just for testing. Second URL goes to a specific project area and only displays some of the layers.
+
 This URL goes to the map with no URL variables, shows all layers in config
 
 http://nickmartinelli.com/mrwc/
