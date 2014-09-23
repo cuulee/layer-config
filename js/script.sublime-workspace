@@ -1,0 +1,201 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pol",
+				"PolygonSymbolizer"
+			],
+			[
+				"fill",
+				"fill-opacity"
+			],
+			[
+				"fon",
+				"font-style"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/nicholasmartinelli/Downloads/index.html",
+		"/Applications/MAMP/htdocs/building geoserver/holy fucking map server batman.txt",
+		"/Applications/MAMP/htdocs/building geoserver/index.html",
+		"/Applications/MAMP/htdocs/northkorea/dprktopo.json",
+		"/Applications/MAMP/htdocs/northkorea/index.html",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/utils/util_remote.php",
+		"/Users/nicholasmartinelli/Desktop/bash_logs/ubuntu ec2 setup and geo install",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/shtml/brakeparts/json/viz_cf.json",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/shtml/affinia/chassis/index.php",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/shtml/brakeparts/json/viz_fips.json",
+		"/Applications/MAMP/htdocs/censustracts/index.html",
+		"/Users/nicholasmartinelli/node_apps/cencon.js",
+		"/Users/nicholasmartinelli/node_apps/tile_symbols.xml",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/shtml/index.php",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/shtml/.htaccess",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/shtml/application/view/head.php",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/utils/util.php",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/shtml/brakeparts/js/script.js",
+		"/Applications/MAMP/htdocs/marketseer_on_aws/shtml/brakeparts/js/bootstrap-select.js",
+		"/Applications/MAMP/bin/checkMysql.sh",
+		"/Applications/MAMP/bin/stopMysql.sh",
+		"/Applications/MAMP/bin/mamp/index.php",
+		"/Applications/MAMP/bin/phpMyAdmin/config.inc.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mapnik",
+			"9.1",
+			"console",
+			"//",
+			"console",
+			"viz",
+			"cartodb",
+			"buildtable",
+			"postgis_settings",
+			"type",
+			"root"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"//console"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "script.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 8, "FID_MRWC_F": 8, "LAT": -123.490600497, "LONG_": -123.490600497, "ProjType": "Temperature Improvement", "WATERBODY": "Woods", "STATUS": "Complete", "Project_No": "170900030504", "Proj_Desc": null, "Subbasin": "Woods", "StartDate": "2010\/07\/01", "EndDate": "2010\/04\/01", "ModelWshed": "Marys", "WC": "MY", "ProjectID": null, "ProjectNam": "FWT Woods Creek Stream Enhancement 2009", "SiteActivi": null, "PIN": "127120000300", "ModelWater": "Marys", "Notes": null, "SiteActi_1": "Pond outlet", "Owner_MRWC": "Cutsforth", "FID_Taxlot": 3268, "TaxlotIden": "127120000300", "OwnerName": "BROWN CONNIE & CUTSFORTH TERRY" }, "geometry": { "type": "Point", "coordinates": [ -123.490600497597995, 44.548924339784406, 0.0 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 10, "FID_MRWC_F": 2, "LAT": -123.620879202, "LONG_": -123.620879202, "ProjType": "Temperature Improvement", "WATERBODY": "Shotpouch", "STATUS": "Complete", "Project_No": "208-3090", "Proj_Desc": null, "Subbasin": "TumTum", "StartDate": "2011\/07\/01", "EndDate": "2011\/10\/15", "ModelWshed": "Marys", "WC": "MY", "ProjectID": null, "ProjectNam": "Shotpouch Cr Restoration Plan Phase 2_SIP", "SiteActivi": null, "PIN": "11-08-00-00-07600-00", "ModelWater": "Marys", "Notes": null, "SiteActi_1": "Pond outlet", "Owner_MRWC": "Baker", "FID_Taxlot": 29583, "TaxlotIden": "11-08-00-00-07600-00", "OwnerName": "BAKER ARLENE M" }, "geometry": { "type": "Point", "coordinates": [ -123.620879202521962, 44.592898760458766, 0.0 ] } }
+]
+}
