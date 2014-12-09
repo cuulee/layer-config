@@ -71,6 +71,9 @@ var go = function(){
 			var hoverArray = d.hoverArray;
 			var click = d.click;
 			var clickArray = d.clickArray;
+			var urllink = d.urllink;
+			var urllinkArray = d.urllinkArray;
+
 			loadJSON(pathtofile,
 		         function(data) { 
 		         	//console.log(data); 
@@ -194,7 +197,10 @@ var go = function(){
 	function itemClick(feature,layer,clickArray){
 		var txt = "";
 		for(var t = 0;t<clickArray.length;t++){
-		   	txt += "<span class='click-display'>"+clickArray[t].displayname + ": </span><span class='click-detail'>"+ feature.properties[clickArray[t].field] + "</span></br>";
+			var label = clickArray[t].displayname;
+			var value = urlify(feature.properties[clickArray[t].field])
+
+		   	txt += "<span class='click-display'>"+ label + ": </span><span class='click-detail'>"+ value + "</span></br>";
 		}
 		layer.bindPopup(txt);
 	}
@@ -203,6 +209,14 @@ var go = function(){
 	    weight: 5,
 	    opacity: 0.6
 	};
+	
+	function urlify(txt){
+		if(!isNaN(txt)){return txt;}
+		var urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+		return txt.replace(urlRegex, function(url) {
+	        return '<a href="' + url + '">' + url + '</a>';
+	    });
+	}
 }
 //set vars
 var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
@@ -219,17 +233,42 @@ go();
 /*
 available styles:
 NAME  			TYPE	DEFAULT		NOTES
-stroke			Boolean	true		Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.
-color			String	'#03f'		Stroke color.
-weight			Number	5	 		Stroke width in pixels.
-opacity			Number	0.5			Stroke opacity.
-fill			Boolean	depends		Whether to fill the path with color. Set it to false to disable filling on polygons or circles.
+stroke			Boolean	true			Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.
+color			String	'#03f'			Stroke color.
+weight			Number	5	 			Stroke width in pixels.
+opacity			Number	0.5				Stroke opacity.
+fill			Boolean	depends			Whether to fill the path with color. Set it to false to disable filling on polygons or circles.
 fillColor		String	same as color	Fill color.
-fillOpacity		Number	0.2			Fill opacity.
-dashArray		String	null		A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).
-lineCap			String	null		A string that defines shape to be used at the end of the stroke.
-lineJoin		String	null		A string that defines shape to be used at the corners of the stroke.
-clickable		Boolean	true		If false, the vector will not emit mouse events and will act as a part of the underlying map.
-pointerEvents	String	null		Sets the pointer-events attribute on the path if SVG backend is used.
+fillOpacity		Number	0.2				Fill opacity.
+dashArray		String	null			A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).
+lineCap			String	null			A string that defines shape to be used at the end of the stroke.
+lineJoin		String	null			A string that defines shape to be used at the corners of the stroke.
+clickable		Boolean	true			If false, the vector will not emit mouse events and will act as a part of the underlying map.
+pointerEvents	String	null			Sets the pointer-events attribute on the path if SVG backend is used.
 */
+
+/*--------------------------
+EXAMPLE CONFIG from config.json
+
+"displayname":"Wetlands",
+"pathtofile":"resources/geojson/Wetlands071814.json",
+"stroke":true,
+"color":"#33a02c",
+"weight":4,
+"opacity":0.9,
+"fill":true,
+"fillColor":"#33a02c",
+"fillOpacity":0.2,
+"geometry":"polygon",
+"hover":true,
+"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
+"click":true,
+"clickArray":[{"displayname":"Project Name","field":"ProjectNam"},{"displayname":"Subbasin","field":"Subbasin"},{"displayname":"Square Feet","field":"sq_ft"},{"displayname":"Status","field":"Status"}]
+"urllink":true,
+"urllinkArray":[{"display":"Project Page","field":"linkfield"}]
+-------------------------------*/
+
+
+
+
 //"stroke":true,"color":"#000","weight":5,"opacity":0.5,"fill":true,"fillColor":"#000","fillOpacity":0.2

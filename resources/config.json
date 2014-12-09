@@ -12,6 +12,7 @@
 		"geometry":"polygon",
 		"click":true,
 		"clickArray":[{"displayname":"Basin","field":"HU_12_NAME"}]
+
 	},
 	{	"displayname":"MRWC Boundary",
 		"pathtofile":"resources/geojson/boundary.json",
@@ -150,7 +151,7 @@
 		"hover":true,
 		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
 		"click":true,
-		"clickArray":[{"displayname":"Project Name","field":"ProjectNam"},{"displayname":"Subbasin","field":"Subbasin"},{"displayname":"Square Feet","field":"sq_ft"},{"displayname":"Status","field":"Status"}]
+		"clickArray":[{"displayname":"Project Name","field":"ProjectNam"},{"displayname":"Subbasin","field":"Subbasin"},{"displayname":"Square Feet","field":"sq_ft"},{"displayname":"Status","field":"Status"},{"displayname":"Project Page","field":"urllink"}]
 	}
 	]	
 }
