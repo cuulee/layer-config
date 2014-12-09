@@ -6,13 +6,12 @@
 		"color":"#33a02c",
 		"weight":2,
 		"opacity":1,
-		"fill":true,
+		"fill":false,
 		"fillColor":"#fff",
 		"fillOpacity":0.1,
 		"geometry":"polygon",
-		"click":true,
-		"clickArray":[{"displayname":"Basin","field":"HU_12_NAME"}]
-
+		"staticLabel":"true",
+		"staticLabelField":"HU_12_NAME"
 	},
 	{	"displayname":"MRWC Boundary",
 		"pathtofile":"resources/geojson/boundary.json",

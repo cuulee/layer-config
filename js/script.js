@@ -32,16 +32,15 @@ var go = function(){
          },
          function(xhr) { console.error(xhr); }
 	);
-	//add custom attribution
-	//helper functions
-	function makeMap(){
-		map = new L.Map('map', {
-			center: center,
-			zoom: zoom,
-			layers: layers,
-			attributionControl: true
-		});
-		//L.control.attribution({position: 'bottomright', prefix: '<a href="http://leafletjs.com/">Leaflet</a>, <a href="http://www.esri.com/software/arcgis/arcgisonline/maps/maps-and-map-layers">ESRI</a>, <a href="http://openstreetmap.org">OSM</a>'}).addTo(map);
+
+	map = new L.Map('map', {
+		center: center,
+		zoom: zoom,
+		layers: layers,
+		attributionControl: true
+	});
+	
+	function addThemes(){
 		L.control.layers(baseMaps,overlayMaps,{position:"bottomleft",autoZIndex:true}).addTo(map);
 		if(getUrlVars()["lyrArr"]){
 			$.each(overlayMaps, function(index, value) {
@@ -55,7 +54,7 @@ var go = function(){
 	function makeNewLayer(alldata,i,l)
 	{
 		 if(i==l){
-		 	makeMap();
+		 	addThemes();
 		 	return;
 		 }
 		 else{
@@ -71,8 +70,8 @@ var go = function(){
 			var hoverArray = d.hoverArray;
 			var click = d.click;
 			var clickArray = d.clickArray;
-			var urllink = d.urllink;
-			var urllinkArray = d.urllinkArray;
+			var staticLabel = d.staticLabel;
+			var staticLabelField = d.staticLabelField;
 
 			loadJSON(pathtofile,
 		         function(data) { 
@@ -88,6 +87,10 @@ var go = function(){
 					        	}
 					        	if(click){
 					        		itemClick(feature,layer,clickArray);
+						        }
+						        if(staticLabel){
+						        	console.log("running label");
+						        	onEachFeatureToLabel(feature,layer,staticLabelField);
 						        }
 					     	}
 					    });
@@ -122,7 +125,7 @@ var go = function(){
 					layers.push(myLayer);
 					var idx = lyrArr.indexOf(displayname);
 					if(idx>-1 || !getUrlVars()["lyrArr"]){
-						//myLayer.addTo(map);
+						myLayer.addTo(map);
 					}
 					i = i+1;
 					makeNewLayer(alldata,i,alldata.length);
@@ -156,6 +159,26 @@ var go = function(){
 	    });
 	    return vars;
 	}
+	var onEachFeatureToLabel = function (feature,layer,staticLabelField){
+		console.log("label being added");
+		//make new point layer from centroids;
+		label = new L.Label()
+		label.setContent(feature.properties[staticLabelField]);
+		//label.setLatLng(layer.getBounds().getCenter());
+		var centroid = getCentroid(feature.geometry.coordinates[0]);
+		var latlng = L.latLng(centroid[1],centroid[0]);
+		label.setLatLng(latlng);
+		
+		map.showLabel(label);
+		
+	}
+	
+	var getCentroid = function (arr) { 
+	    return arr.reduce(function (x,y) {
+	        return [x[0] + y[0]/arr.length, x[1] + y[1]/arr.length] 
+	    }, [0,0]) 
+	}
+
 	var onEachFeature = function(feature, layer, style, hoverArray) {	
 	    (function(layer, properties) {
 	      	// Create a mouseover event
