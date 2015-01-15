@@ -252,12 +252,12 @@ var go = function(){
 //set vars
 var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: '<a href="http://www.arcgis.com/home/item.html?id=30e5fe3149c34df1ba922e6f5bbf808f&_ga=1.209702866.1928673696.1406678366">ESRI</a>',
-	opacity: 0.6
+	opacity: 0.5
 });
 var mqopenaerial = L.tileLayer('http://oatile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg', {
 	attribution: '<a href="http://www.mapquest.com/" target="_blank">MapQuest</a> ',
 	subdomains: '1234',
-	opacity: 0.6
+	opacity: 0.3
 });
 //ready...set...
 go();
