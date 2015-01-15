@@ -16,7 +16,6 @@ var go = function(){
 	//center is the default map center, to be overriden by uri lat,lng
 	var center = new L.LatLng(44.50, -123.41);
 	if(getUrlVars()["lat"]){
-		//console.log(decodeURIComponent(getUrlVars()["lng"]))
 		center = new L.LatLng(getUrlVars()["lat"],getUrlVars()["lng"] );
 	}
 	//zoom is the default zoom to be overriden by uri zoom
@@ -75,7 +74,6 @@ var go = function(){
 
 			loadJSON(pathtofile,
 		         function(data) { 
-		         	//console.log(data); 
 		         	var myLayer;
 		         	var style = {"color": color,"fillColor":fillcolor,"weight":weight,"fill":fill,"dashArray":dashArray};
 		         	
@@ -89,7 +87,6 @@ var go = function(){
 					        		itemClick(feature,layer,clickArray);
 						        }
 						        if(staticLabel){
-						        	//console.log("running label");
 						        	onEachFeatureToLabel(feature,layer,staticLabelField);
 						        }
 					     	}
@@ -160,7 +157,6 @@ var go = function(){
 	    return vars;
 	}
 	var onEachFeatureToLabel = function (feature,layer,staticLabelField){
-		console.log("label being added");
 		//make new point layer from centroids;
 		label = new L.Label()
 		label.setContent(feature.properties[staticLabelField]);
@@ -183,7 +179,6 @@ var go = function(){
 	    (function(layer, properties) {
 	      	// Create a mouseover event
 	      	var defaultStyle = style;
-	      	//console.log(hoverArray);
 		    layer.on("mouseover", function (e) {
 		        // Change the style to the highlighted version
 		        layer.setStyle(highlightStyle);
@@ -210,7 +205,6 @@ var go = function(){
 		        // Start by reverting the style back
 		        layer.setStyle(defaultStyle); 
 		        // And then destroying the popup
-		        //console.log(properties);
 		        $("#popup-").remove();
 		    });
 		      // Close the "anonymous" wrapper function, and call it while passing
@@ -220,7 +214,6 @@ var go = function(){
 	function itemClick(feature,layer,clickArray){
 		var txt = "";
 		for(var t = 0;t<clickArray.length;t++){
-			console.log(feature.properties[clickArray[t].field]);
 			if(clickArray[t].field==="WebSlug"){
 				txt += urlify(feature.properties[clickArray[t].field])
 			}else{
