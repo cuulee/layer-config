@@ -246,7 +246,7 @@ var go = function(){
 	        return '<a href="' + url + '">' + url + '</a>';
 	    });
 		*/
-		return '<a class="click-detail" href="https://www.mrwc.org/projects/' + txt + '">Project Details</a>';
+		return '<a class="click-detail" href="https://www.mrwc.org/projects/' + txt + '"  target="_blank">Project Details</a>';
 	}
 }
 //set vars
