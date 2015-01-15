@@ -89,7 +89,7 @@ var go = function(){
 					        		itemClick(feature,layer,clickArray);
 						        }
 						        if(staticLabel){
-						        	console.log("running label");
+						        	//console.log("running label");
 						        	onEachFeatureToLabel(feature,layer,staticLabelField);
 						        }
 					     	}
@@ -220,10 +220,14 @@ var go = function(){
 	function itemClick(feature,layer,clickArray){
 		var txt = "";
 		for(var t = 0;t<clickArray.length;t++){
-			var label = clickArray[t].displayname;
-			var value = urlify(feature.properties[clickArray[t].field])
-
-		   	txt += "<span class='click-display'>"+ label + ": </span><span class='click-detail'>"+ value + "</span></br>";
+			console.log(feature.properties[clickArray[t].field]);
+			if(clickArray[t].field==="WebSlug"){
+				txt += urlify(feature.properties[clickArray[t].field])
+			}else{
+				var label = clickArray[t].displayname;
+				var value = feature.properties[clickArray[t].field]
+				txt += "<span class='click-display'>"+ label + ": </span><span class='click-detail'>"+ value + "</span></br>";
+			}
 		}
 		layer.bindPopup(txt);
 	}
@@ -234,20 +238,26 @@ var go = function(){
 	};
 	
 	function urlify(txt){
-		if(!isNaN(txt)){return txt;}
+		/*
+		//THIS SECTION AUTO DETECTS URLs, replaced with hard code for MRWC project.
+		if(!isNaN(txt)|| txt===undefined){return txt;}
 		var urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
 		return txt.replace(urlRegex, function(url) {
 	        return '<a href="' + url + '">' + url + '</a>';
 	    });
+		*/
+		return '<a class="click-detail" href="https://www.mrwc.org/projects/' + txt + '">Project Details</a>';
 	}
 }
 //set vars
 var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: '<a href="http://www.arcgis.com/home/item.html?id=30e5fe3149c34df1ba922e6f5bbf808f&_ga=1.209702866.1928673696.1406678366">ESRI</a>'
+	attribution: '<a href="http://www.arcgis.com/home/item.html?id=30e5fe3149c34df1ba922e6f5bbf808f&_ga=1.209702866.1928673696.1406678366">ESRI</a>',
+	opacity: 0.6
 });
 var mqopenaerial = L.tileLayer('http://oatile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg', {
 	attribution: '<a href="http://www.mapquest.com/" target="_blank">MapQuest</a> ',
-	subdomains: '1234'
+	subdomains: '1234',
+	opacity: 0.6
 });
 //ready...set...
 go();

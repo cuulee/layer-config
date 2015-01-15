@@ -4,7 +4,7 @@
 		"pathtofile":"resources/geojson/MRWC_Marys_Subbasins.json",
 		"stroke":true,
 		"color":"#33a02c",
-		"weight":2,
+		"weight":1,
 		"opacity":1,
 		"fill":false,
 		"fillColor":"#fff",
@@ -17,46 +17,12 @@
 		"pathtofile":"resources/geojson/boundary.json",
 		"stroke":true,
 		"color":"#33a02c",
-		"weight":10,
+		"weight":5,
 		"opacity":0.1,
 		"fill":false,
 		"geometry":"polygon"
 	},
-	{	
-		"displayname":"Greasy Knotweed 2013",
-		"pathtofile":"resources/geojson/GreasyKnotweed2013.json",
-		"stroke":true,
-		"color":"#6a3d9a",
-		"weight":2,
-		"opacity":0.5,
-		"fill":false,
-		"fillColor":"#6a3d9a",
-		"fillOpacity":0.2,
-		"geometry":"point"
-	},
-	{	"displayname":"TumTum Woods Knotweed 2013",
-		"pathtofile":"resources/geojson/TumTumWoodsKnotweed2013.json",
-		"stroke":true,
-		"color":"#6a3d9a",
-		"weight":2,
-		"opacity":0.5,
-		"fill":true,
-		"fillColor":"#6a3d9a",
-		"fillOpacity":0.2,
-		"geometry":"point"
-	},
-	{	"displayname":"Woods Knotweed 2013",
-		"pathtofile":"resources/geojson/WoodsKnotweed2013.json",
-		"stroke":true,
-		"color":"#6a3d9a",
-		"weight":2,
-		"opacity":0.5,
-		"fill":true,
-		"fillColor":"#6a3d9a",
-		"fillOpacity":0.2,
-		"geometry":"point"
-	},
-	{	"displayname":"Uplands Ongoing",
+	{	"displayname":"Uplands",
 		"pathtofile":"resources/geojson/UplandsOngoing071814.json",
 		"stroke":true,
 		"color":"#ff7f00",
@@ -67,7 +33,15 @@
 		"fillOpacity":0.2,
 		"geometry":"polygon",
 		"hover":true,
-		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}]
+		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
+		"click":true,
+		"clickArray":[
+				{"displayname":"Project Name","field":"ProjectNam"},
+				{"displayname":"Site Activity","field":"UplandActi"},
+				{"displayname":"End Date","field":"EndDate"},
+				{"displayname":"Acres","field":"acres"},
+				{"displayname":"Project Details","field":"WebSlug"}
+			]
 	},
 	{	"displayname":"Riparian Reveg",
 		"pathtofile":"resources/geojson/RiparianRevegComplete071814.json",
@@ -80,9 +54,17 @@
 		"fillOpacity":0.2,
 		"geometry":"polygon",
 		"hover":true,
-		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}]
+		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
+		"click":true,
+		"clickArray":[
+				{"displayname":"Project Name","field":"ProjectNam"},
+				{"displayname":"Site Activity","field":"SiteActivi"},
+				{"displayname":"End Date","field":"EndDate"},
+				{"displayname":"Acres","field":"acres"},
+				{"displayname":"Project Details","field":"WebSlug"}
+			]
 	},
-	{	"displayname":"Fencing Completed 2014",
+	{	"displayname":"Fencing Completed",
 		"pathtofile":"resources/geojson/FencingCompleted071814.json",
 		"stroke":true,
 		"color":"#e31a1c",
@@ -93,9 +75,39 @@
 		"fillOpacity":0.2,
 		"geometry":"line",
 		"hover":true,
-		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}]
+		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
+		"click":true,
+		"clickArray":[
+				{"displayname":"Project Name","field":"ProjectNam"},
+				{"displayname":"Site Activity","field":"SiteActivi"},
+				{"displayname":"End Date","field":"EndDate"},
+				{"displayname":"Miles","field":"miles"},
+				{"displayname":"Project Details","field":"WebSlug"}
+			]
 	},
-	{	"displayname":"Fish Passage 2014",
+	{	
+		"displayname":"Greasy Knotweed",
+		"pathtofile":"resources/geojson/GreasyKnotweed2013.json",
+		"stroke":true,
+		"color":"#6a3d9a",
+		"weight":3,
+		"opacity":0.9,
+		"fill":false,
+		"fillColor":"#6a3d9a",
+		"fillOpacity":0.2,
+		"geometry":"line",
+		"hover":true,
+		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
+		"click":true,
+		"clickArray":[
+				{"displayname":"Project Name","field":"ProjectNam"},
+				{"displayname":"Site Activity","field":"SiteActivi"},
+				{"displayname":"End Date","field":"EndDate"},
+				{"displayname":"Miles","field":"miles"},
+				{"displayname":"Project Details","field":"WebSlug"}
+			]
+	},
+	{	"displayname":"Fish Passage",
 		"pathtofile":"resources/geojson/FishPassageCompleted071814.json",
 		"stroke":true,
 		"color":"#1f78b4",
@@ -106,10 +118,17 @@
 		"fillOpacity":0.2,
 		"geometry":"point",
 		"hover":true,
-		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}]
+		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
+		"click":true,
+		"clickArray":[
+				{"displayname":"Project Name","field":"ProjectNam"},
+				{"displayname":"Site Activity","field":"SiteActivi"},
+				{"displayname":"End Date","field":"EndDate"},
+				{"displayname":"Project Details","field":"WebSlug"}
+			]
 	},
 	{	
-		"displayname":"Flow Completed 2014",
+		"displayname":"Flow Completed",
 		"pathtofile":"resources/geojson/FlowCompleted071814.json",
 		"stroke":true,
 		"color":"#b15928",
@@ -120,10 +139,17 @@
 		"fillOpacity":0.2,
 		"geometry":"point",
 		"hover":true,
-		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}]
+		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
+		"click":true,
+		"clickArray":[
+				{"displayname":"Project Name","field":"ProjectNam"},
+				{"displayname":"Site Activity","field":"SiteActivi"},
+				{"displayname":"End Date","field":"EndDate"},
+				{"displayname":"Project Details","field":"WebSlug"}
+			]
 	},
 	{	
-		"displayname":"In Stream Poly",
+		"displayname":"In Stream Alcoves",
 		"pathtofile":"resources/geojson/InStreamPolyCompleted071814.json",
 		"stroke":true,
 		"color":"#1f78b4",
@@ -134,7 +160,37 @@
 		"fillOpacity":0.2,
 		"geometry":"polygon",
 		"hover":true,
-		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}]
+		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
+		"click":true,
+		"clickArray":[
+				{"displayname":"Project Name","field":"ProjectNam"},
+				{"displayname":"Site Activity","field":"InStrActTy"},
+				{"displayname":"End Date","field":"EndDate"},
+				{"displayname":"Acres","field":"acres"},
+				{"displayname":"Project Details","field":"WebSlug"}
+			]
+	},
+	{	
+		"displayname":"In Stream",
+		"pathtofile":"resources/geojson/InStreamCompleted071814.json",
+		"stroke":true,
+		"color":"#1f78b4",
+		"weight":2,
+		"opacity":0.5,
+		"fill":true,
+		"fillColor":"#1f78b4",
+		"fillOpacity":0.2,
+		"geometry":"point",
+		"hover":true,
+		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
+		"click":true,
+		"clickArray":[
+				{"displayname":"Project Name","field":"ProjectNam"},
+				{"displayname":"Site Activity","field":"InstreamAc"},
+				{"displayname":"End Date","field":"EndDate"},
+				{"displayname":"Acres","field":"acres"},
+				{"displayname":"Project Details","field":"WebSlug"}
+			]
 	},
 	{	
 		"displayname":"Wetlands",
@@ -150,7 +206,13 @@
 		"hover":true,
 		"hoverArray":[{"displayname":"Project","field":"ProjectNam"}],
 		"click":true,
-		"clickArray":[{"displayname":"Project Name","field":"ProjectNam"},{"displayname":"Subbasin","field":"Subbasin"},{"displayname":"Square Feet","field":"sq_ft"},{"displayname":"Status","field":"Status"},{"displayname":"Project Page","field":"urllink"}]
+		"clickArray":[
+				{"displayname":"Project Name","field":"ProjectNam"},
+				{"displayname":"Site Activity","field":"SiteActivi"},
+				{"displayname":"End Date","field":"EndDate"},
+				{"displayname":"Acres","field":"acres"},
+				{"displayname":"Project Details","field":"WebSlug"}
+			]
 	}
 	]	
 }
