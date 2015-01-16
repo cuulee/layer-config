@@ -188,7 +188,6 @@
 				{"displayname":"Project Name","field":"ProjectNam"},
 				{"displayname":"Site Activity","field":"InstreamAc"},
 				{"displayname":"End Date","field":"EndDate"},
-				{"displayname":"Acres","field":"acres"},
 				{"displayname":"Project Details","field":"WebSlug"}
 			]
 	},
