@@ -21,6 +21,7 @@ body{
 	border-radius: 4px;
 	padding: 5px 10px 5px 10px;
 	color:#777;
+	max-width: 150px;
 }
 .click-display{
 	color:#777;
