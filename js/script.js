@@ -166,7 +166,7 @@ var go = function(){
 		label.setLatLng(latlng);
 		
 		map.showLabel(label);
-		console.log(label);
+		//console.log(label);
 	}
 	
 	var getCentroid = function (arr) { 
