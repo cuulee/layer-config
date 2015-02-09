@@ -22,7 +22,7 @@
 		"fill":false,
 		"geometry":"polygon"
 	},
-	{	"displayname":"Uplands",
+	{	"displayname":"Prairie & Uplands",
 		"pathtofile":"resources/geojson/UplandsOngoing071814.json",
 		"stroke":true,
 		"color":"#ff7f00",
@@ -43,7 +43,7 @@
 				{"displayname":"Project Details","field":"WebSlug"}
 			]
 	},
-	{	"displayname":"Riparian Reveg",
+	{	"displayname":"Riparian Planting",
 		"pathtofile":"resources/geojson/RiparianRevegComplete071814.json",
 		"stroke":true,
 		"color":"#b15928",
@@ -64,7 +64,7 @@
 				{"displayname":"Project Details","field":"WebSlug"}
 			]
 	},
-	{	"displayname":"Fencing Completed",
+	{	"displayname":"Riparian Fencing",
 		"pathtofile":"resources/geojson/FencingCompleted071814.json",
 		"stroke":true,
 		"color":"#e31a1c",
@@ -86,7 +86,7 @@
 			]
 	},
 	{	
-		"displayname":"Greasy Knotweed",
+		"displayname":"Knotweed Control",
 		"pathtofile":"resources/geojson/GreasyKnotweed2013.json",
 		"stroke":true,
 		"color":"#6a3d9a",
@@ -128,7 +128,7 @@
 			]
 	},
 	{	
-		"displayname":"Flow Completed",
+		"displayname":"InStream: Flow",
 		"pathtofile":"resources/geojson/FlowCompleted071814.json",
 		"stroke":true,
 		"color":"#b15928",
@@ -149,7 +149,7 @@
 			]
 	},
 	{	
-		"displayname":"In Stream Alcoves",
+		"displayname":"InStream: Alcoves",
 		"pathtofile":"resources/geojson/InStreamPolyCompleted071814.json",
 		"stroke":true,
 		"color":"#1f78b4",
@@ -171,7 +171,7 @@
 			]
 	},
 	{	
-		"displayname":"In Stream",
+		"displayname":"InStream: Logs & Boulders",
 		"pathtofile":"resources/geojson/InStreamCompleted071814.json",
 		"stroke":true,
 		"color":"#1f78b4",

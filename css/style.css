@@ -1,5 +1,5 @@
 body{
-	min-width: 320px;
+	min-width: 200px;
 	font-family: sans-serif;
 }
 #map{
@@ -22,6 +22,7 @@ body{
 	padding: 5px 10px 5px 10px;
 	color:#777;
 	max-width: 150px;
+	pointer-events:none;
 }
 .click-display{
 	color:#777;
@@ -30,3 +31,17 @@ body{
 	color:#222;
 	font-weight: bold;
 }
+.leaflet-popup {
+	position: absolute;
+	text-align: center;
+	max-width: 200px;
+	}
+.leaflet-popup-content-wrapper {
+	padding: 1px;
+	text-align: left;
+	border-radius: 12px;
+	}
+.leaflet-popup-content {
+	margin: 13px 19px;
+	line-height: 1.4;
+	}

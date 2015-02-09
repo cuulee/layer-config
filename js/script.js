@@ -166,7 +166,7 @@ var go = function(){
 		label.setLatLng(latlng);
 		
 		map.showLabel(label);
-		
+		console.log(label);
 	}
 	
 	var getCentroid = function (arr) { 
@@ -195,7 +195,7 @@ var go = function(){
 		        // Insert a headline into that popup
 		        var hed = $("<div></div>", {
 		            text: txt,
-		            css: {fontSize: "16px", marginBottom: "3px"}
+		            css: {fontSize: "16px", marginBottom: "3px", maxWidth:"200px"}
 		        }).appendTo(popup);
 		        // Add the popup to the map
 		        popup.appendTo("#map");
