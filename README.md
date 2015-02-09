@@ -2,6 +2,10 @@ json-config with leaflet
 =========
 For making multiple unique iframe maps available from one source.
 
+Live at https://www.mrwc.org/restore/sub-basins/
+go to individual sub-basins for smaller sidebar maps.
+
+
 Task
   - Make a base map with several layers.
   - Enable map to be shown via iFrame on several pages, should display different extent and layer subset on each page.
